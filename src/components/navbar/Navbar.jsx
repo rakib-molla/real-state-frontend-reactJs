@@ -6,7 +6,6 @@ import { AuthContext } from "../../context/AuthContext";
 function Navbar() {
   const {currentUser} = useContext(AuthContext);
   const [open, setOpen] = useState(false);
-console.log(currentUser);
   
   return (
     <nav>

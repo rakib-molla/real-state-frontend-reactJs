@@ -22,6 +22,7 @@ function RequireAuth() {
   
   const navigate = useNavigate();
   const {currentUser} = useContext(AuthContext);
+  
   useEffect(()=>{
     if(!currentUser){
       navigate('/login')
