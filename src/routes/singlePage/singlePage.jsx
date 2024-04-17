@@ -11,26 +11,23 @@ import { useNavigate } from "react-router-dom";
 
 function SinglePage() {
   const post = useLoaderData();
-  const [save, setSave] = useState(post?.isSaved);
+  const [saved, setSaved] = useState(post.isSaved);
+  const { currentUser } = useContext(AuthContext);
   const navigate = useNavigate();
-  const {currentUser} = useContext(AuthContext);
 
-  const handleSave = async()=>{
-    setSave((prev)=> !prev);
-    if(!currentUser){
-      navigate('/login')
+  const handleSave = async () => {
+    if (!currentUser) {
+      navigate("/login");
     }
+    
+    setSaved((prev) => !prev);
     try {
-      const res = await apiRequest.post("/users/save",{
-        postId: post.id
-      })
-      console.log(res);
+      await apiRequest.post("/users/save", { postId: post.id });
     } catch (err) {
-      console.log(err)
-    setSave((prev)=> !prev);
-
+      console.log(err);
+      setSaved((prev) => !prev);
     }
-  }
+  };
   return (
     <div className="singlePage">
       <div className="details">
@@ -135,9 +132,9 @@ function SinglePage() {
               <img src="/chat.png" alt="" />
               Send a Message
             </button>
-            <button onClick={handleSave} style={{backgroundColor: save ? "#fece51": "white"}}>
+            <button onClick={handleSave} style={{backgroundColor: saved ? "#fece51": "white"}}>
               <img src="/save.png" alt="" />
-              {save ? "Place saved" : "save the place"}
+              {saved ? "Place saved" : "save the place"}
             </button>
           </div>
         </div>
