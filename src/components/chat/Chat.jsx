@@ -80,7 +80,7 @@ function Chat({chats}) {
             <div className="message" key={chat.id}
             style={{
               backgroundColor:
-                chat.seenBy.includes(currentUser.userInfo.id) || chat?.id === chat.id
+                chat.seenBy.includes(currentUser?.userInfo?.id) 
                   ? "white"
                   : "#fecd514e",
             }}
