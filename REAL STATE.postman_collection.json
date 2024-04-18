@@ -1,0 +1,303 @@
+{
+	"info": {
+		"_postman_id": "0a7fdc44-a51d-4343-8126-3b83ac89f455",
+		"name": "REAL STATE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29098238"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"rakib\",\r\n    \"email\": \"rakib@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8800/api/auth/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8800/api/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"john@gmail.com\",\r\n    \"password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8800/api/auth/logout"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test",
+			"item": [
+				{
+					"name": "Protected Route Test",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8800/api/test/should-be-logged-in"
+					},
+					"response": []
+				},
+				{
+					"name": "Protected Route Test isAdmin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8800/api/test/should-be-admin"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "get Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8800/api/users/"
+					},
+					"response": []
+				},
+				{
+					"name": "get User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8800/api/users/661e21c945b0a7e2a940dd0c"
+					},
+					"response": []
+				},
+				{
+					"name": "update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"jack\",\r\n    \"email\":\"jack@gmail.com\",\r\n    \"password\": \"hello\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8800/api/users/661e21c945b0a7e2a940dd0c"
+					},
+					"response": []
+				},
+				{
+					"name": "delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8800/api/users/660f11af499f77b411afafd6"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "Add Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"postData\": {\r\n        \"title\": \"title1\",\r\n        \"price\": 10,\r\n        \"images\": [\r\n            \"https://img.freepik.com/free-photo/spacious-room-with-bed_1203-633.jpg?t=st=1713274645~exp=1713278245~hmac=b34cef1b0356e2697a6a71500759e120171e1ac2828d0b55656ffa37f34707ca&w=740\",\r\n            \"https://img.freepik.com/premium-photo/bedroom-interior-decoration-illustration-concept_252025-67107.jpg?w=826\",\r\n            \"https://img.freepik.com/free-photo/tidy-room-with-lit-lamps_1203-635.jpg?t=st=1713274711~exp=1713278311~hmac=944a0ba3a3f1cf9efcb882adeebb827b757e83732cc2a0b49e3188937f8b9940&w=740\"\r\n            \r\n        ],\r\n        \"address\": \"Mirpur\",\r\n        \"city\": \"Dhaka\",\r\n        \"bedroom\": 11,\r\n        \"bathroom\": 11,\r\n        \"latitude\": \"23°28'N\",\r\n        \"longitude\": \"91°10'E\",\r\n        \"type\": \"rent\",\r\n        \"property\": \"apartment\"\r\n    },\r\n    \"postDetail\": {\r\n        \"desc\": \"Desc1\",\r\n        \"utilities\": \"owner is responsible\",\r\n        \"pet\": \"Allowed\",\r\n        \"income\": \"3x Time\",\r\n        \"size\": 88,\r\n        \"school\": 1200,\r\n        \"bus\": 800,\r\n        \"restaurant\": 1500\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8800/api/posts/"
+					},
+					"response": []
+				},
+				{
+					"name": "get all post",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8800/api/posts/"
+					},
+					"response": []
+				},
+				{
+					"name": "get single post",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8800/api/posts/661ea3fc784a008137032ca3"
+					},
+					"response": []
+				},
+				{
+					"name": "update single post",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "http://localhost:8800/api/posts/123"
+					},
+					"response": []
+				},
+				{
+					"name": "delete post",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8800/api/posts/661e84301fda98e7e6833d65"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chats",
+			"item": [
+				{
+					"name": "Get Chats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8800/api/chats/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Chat",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8800/api/chats/6620aa8e6c77750ef914fb4a"
+					},
+					"response": []
+				},
+				{
+					"name": "add chat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"receiverId\": \"6620a9f66c77750ef914fb48\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8800/api/chats/"
+					},
+					"response": []
+				},
+				{
+					"name": "Read Chat",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "http://localhost:8800/api/chats/read/123"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Message",
+			"item": [
+				{
+					"name": "Add Message",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"first Message\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8800/api/messages/6620aa8e6c77750ef914fb4a"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "realState",
+			"value": "http://localhost:8800/api",
+			"type": "string"
+		}
+	]
+}
