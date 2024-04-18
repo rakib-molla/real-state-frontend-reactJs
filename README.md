@@ -1,4 +1,4 @@
-# React Real Estate UI Design
+# React Real Estate With Realtime Chat System
 
 Admin credentials ={
    email: admin@gmail.com 
@@ -15,12 +15,12 @@ User credentials ={
 4. run your project
 
 <h2> Project Details  </h2>
-   => <strong>
-   1. Auth System 
-   2. login and registration system </br>
-   3. profile page for specific user </br>
-   4. profile update information</br>
-   5. Add new , edit, update, delete post (crud) system</br>
-   6. multiple search functionality</br>
-   7. realtime chat messaging system using <u>socket.io </u></br>
+   <strong> 
+   ➔ Auth System </br>
+   ➔ login and registration system </br>
+   ➔ profile page for specific user </br>
+  ➔ profile update information</br>
+   ➔ Add new , edit, update, delete post (crud) system</br>
+   ➔ multiple search functionality</br>
+   ➔ realtime chat messaging system using <u>socket.io </u></br>
    </strong>
