@@ -17,10 +17,10 @@ User credentials ={
 <h2> Project Details  </h2>
    => <strong>
    1. Auth System 
-   2. login and registration system
-   3. profile page for specific user 
-   4. profile update information
-   5. Add new , edit, update, delete post (crud) system
-   6. multiple search functionality
-   7. realtime chat messaging system using <u>socket.io </u>
+   2. login and registration system </br>
+   3. profile page for specific user </br>
+   4. profile update information</br>
+   5. Add new , edit, update, delete post (crud) system</br>
+   6. multiple search functionality</br>
+   7. realtime chat messaging system using <u>socket.io </u></br>
    </strong>
